@@ -228,6 +228,13 @@ img {
     url("../images/Header_img.jpg");
 }
 
+/* Modal */
+
+.contract {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
 /* Button */
 button {
   padding: 6px 22px;

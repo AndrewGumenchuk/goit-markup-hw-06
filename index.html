@@ -64,36 +64,9 @@
             эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="" class="button">Заказать услугу</a>
+          <button data-modal-open>Заказать услугу</button>
         </div>
       </section>
-
-      <!--Modal-->
-      <form class="js-speaker-form">
-        <p>
-          <label for="name">Имя</label>
-          <input type="text" name="name" id="name">
-        </p>
-        <p>
-          <label for="tel">Телефон</label>
-          <input type="tel" name="tel" id="tel">
-        </p>
-        <p>
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail">
-        </p>
-        <p>
-          <label for="comment">Комментарий</label>
-          <input type="comment" name="comment" id="comment">
-        </p>
-        
-        <input type="checkbox" name="" id="">
-        <label for="">Соглашаюсь с рассылкой и принимаю 
-          <span class="contract">Условия договора</span> 
-        </label>
-
-        <button type="submit">Отправить</button>
-      </form>
 
       <!--Features-->
       <div class="container">
@@ -474,21 +447,66 @@
             </li>
           </ul>
         </div>
-        <div class="footer-subscription">
-          <div class="subscription">
-            <div><p class="title">подпишитесь на рассылку</p></div>
-            <div><a href="" class="footer-button">Подписаться</a></div>
+          <div class="footer-subscription">
+            <div class="subscription">
+              <div>
+                <p class="title">подпишитесь на рассылку</p>
+              </div>
+                <div>
+                  <a href="" class="footer-button">Подписаться</a>
+                </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container copyright">
-        <p class="copyright">2020 | Developed by GoIT Students</p>
-      </div>
+          <div class="container copyright">
+            <p class="copyright">2020 | Developed by GoIT Students</p>
+          </div>
+        
     </footer>
+
+    <!--Modal-->
+
+    <div class="backdrop data-modal">
+      <div class="modal">
+        <form class="js-speaker-form" autocomplete="off">
+          <div class="form-text">
+            <b>Оставьте свои данные, мы вам перезвоним</b>
+          </div>
+          <div class="form-field">
+            <input type="text"  class="form-input" name="name" id="name" placeholder=" ">
+            <label for="name" class="form-label">Имя</label>
+            <span class="form-icon"></span>
+          </div>
+          <div class="form-field">
+            <input type="tel" class="form-input" name="tel" id="tel" placeholder=" ">
+            <label for="tel" class="form-label">Телефон</label>
+            <span class="form-icon"></span>
+          </div>
+          <div class="form-field">
+            <input type="email" class="form-input" name="mail" id="mail" placeholder=" ">
+            <label for="mail" class="form-label">Почта</label>
+            <span class="form-icon"></span>
+          </div>
+          <div class="form-field">
+            <textarea name="comment" class="form-textarea" id="comment" placeholder=" "></textarea>
+            <label for="comment" class="form-comment">Комментарий</label>
+          </div>
+          <div class="form-policy">
+            <input type="checkbox" name="policy" id="policy" placeholder=" ">
+            <label for="policy">Соглашаюсь с рассылкой и принимаю
+              <a href="" class="contract">Условия договора</a>
+            </label>
+          </div>
+        
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
 
     <!-- Script -->
 
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"> 
+    </script>
     </body>
   </body>
 </html>

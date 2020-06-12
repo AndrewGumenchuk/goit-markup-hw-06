@@ -240,6 +240,7 @@ img {
   opacity: 1;
 
   background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -247,11 +248,15 @@ img {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
 
@@ -260,6 +265,8 @@ img {
   background: var(--background-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 form {
@@ -392,7 +399,6 @@ textarea {
 .form-policy {
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
   align-items: center;
 
   margin-bottom: 30px;
@@ -403,7 +409,7 @@ textarea {
   color: var(--secondary-text-color);
 }
 
-.form-policy::after {
+.form-policy::before {
   content: "";
   display: inline-block;
 
@@ -425,10 +431,20 @@ textarea {
   -webkit-appearence: none;
   -moz-appearence: none;
   appearance: none;
-  display: none;
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.checkbox:checked + .form-policy::after {
+.checkbox:checked + .form-policy::before,
+.checkbox:checked + .form-policy:before {
+  content: "";
   background-size: contain;
   background-origin: border-box;
 

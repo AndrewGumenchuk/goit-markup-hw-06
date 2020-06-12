@@ -447,21 +447,25 @@
             </li>
           </ul>
         </div>
-          <div class="footer-subscription">
-            <div class="subscription">
-              <div>
-                <p class="title">подпишитесь на рассылку</p>
-              </div>
-                <div>
-                  <a href="" class="footer-button">Подписаться</a>
-                </div>
-            </div>
+        <div class="footer-subscription">
+          <div class="subscription">
+            <b class="title">подпишитесь на рассылку</b>
+            <form class="footer-form" autocomplete="off">
+              <label for="mail">
+                <input type="email" class="footer-input" name="mail" placeholder="E-mail">
+              </label>
+              <button class="footer-button" type="submit">Подписаться
+                <svg width="24" height="24" class="footer-mail">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
-          <div class="container copyright">
-            <p class="copyright">2020 | Developed by GoIT Students</p>
-          </div>
-        
+      </div>
+      <div class="container copyright">
+        <p class="copyright">2020 | Developed by GoIT Students</p>
+      </div>
     </footer>
 
     <!--Modal-->
@@ -496,7 +500,7 @@
               <use href="./images/sprite.svg#icon-email"></use>
             </svg>
           </div>
-          <div class="form-field">
+          <div class="form-field comment">
             <textarea name="comment" class="form-textarea" id="comment" placeholder=" "></textarea>
             <label for="comment" class="form-comment">Комментарий</label>
           </div>

@@ -291,7 +291,7 @@ form {
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
   transform: translate(-26px, -40px);
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .form-input:focus ~ .form-icon {
